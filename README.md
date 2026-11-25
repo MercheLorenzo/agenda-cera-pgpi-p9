@@ -1,6 +1,8 @@
-# Agenda CeRa — PGPI · Práctica 9
+# Agenda CeRa — Práctica 9 de PGPI
 
-Simulación académica de la gestión de la configuración del software. Universidad de Granada, curso 2026/2027. La aplicación propuesta en P1–P8 facilita la organización del tiempo y las actividades mediante una agenda accesible y personalizable. Los archivos `.txt` de este repositorio representan cambios de código; no son una aplicación ejecutable ni contienen datos reales del alumnado.
+Simulación académica de la gestión de la configuración del software. Universidad de Granada, curso 2026/2027. 
+
+La aplicación propuesta facilita la organización del tiempo y las actividades mediante una agenda accesible y personalizable. Los archivos `.txt` de este repositorio representan cambios de código, no son una aplicación ejecutable ni contienen datos reales del alumnado.
 
 ## Equipo
 
@@ -17,7 +19,7 @@ Simulación académica de la gestión de la configuración del software. Univers
 | Agenda diaria/semanal | E03 / SCRUM-24 | `feature/agenda` | Juan Carlos | Juan Carlos y Mercedes |
 | Gestión del comedor | E04 / SCRUM-11 | `feature/comedor` | Manuel | Manuel y Mercedes |
 
-Las referencias SCRUM corresponden al backlog de P3, no al nuevo proyecto Jira de P9.
+Las referencias SCRUM corresponden al backlog de P3 y Jira.
 
 | Rama personal | Rama de origen | Integrante | Aportación |
 |---|---|---|---|

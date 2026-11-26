@@ -1,0 +1,2 @@
+COMEDOR | REGISTRO (simulación)
+Estado inicial: pendiente de definir los datos de asistencia y dieta.

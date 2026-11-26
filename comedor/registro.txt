@@ -2,3 +2,9 @@ COMEDOR | REGISTRO (simulación)
 Campos: fecha, aula, identificador ficticio, asistencia (si/no), dieta.
 El administrador asigna la recogida diaria al estudiante encargado.
 Se registra una respuesta por alumno y fecha.
+Se comprueba que asistencia tenga un valor válido y no se duplican registros.
+Datos de ejemplo inventados, sin correspondencia con personas reales:
+2026-11-25; A01; E01; si; normal
+2026-11-25; A01; E02; no; sin-gluten
+2026-11-25; A02; E03; si; triturada
+2026-11-24; A02; E04; si; normal

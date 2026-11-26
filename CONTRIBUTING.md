@@ -1,6 +1,6 @@
 # Guía de contribución — Agenda CeRa
 
-Gracias por colaborar en Agenda CeRa, proyecto académico de la asignatura Planificación y Gestión de Proyectos Informáticos (PGPI), Universidad de Granada, curso 2026/2027.
+Agenda CeRa, proyecto académico de la asignatura Planificación y Gestión de Proyectos Informáticos (PGPI), Universidad de Granada, curso 2026/2027.
 
 Esta guía establece las normas de trabajo colaborativo, control de versiones e integración de cambios para la práctica 9. Los archivos `.txt` simulan código: el repositorio no contiene una aplicación ejecutable. El alcance y las responsabilidades generales se describen en el [README](README.md).
 

@@ -1,2 +1,4 @@
 COMEDOR | REGISTRO (simulación)
-Estado inicial: pendiente de definir los datos de asistencia y dieta.
+Campos: fecha, aula, identificador ficticio, asistencia (si/no), dieta.
+El administrador asigna la recogida diaria al estudiante encargado.
+Se registra una respuesta por alumno y fecha.

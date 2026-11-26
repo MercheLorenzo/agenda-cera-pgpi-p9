@@ -1,0 +1,7 @@
+AGENDA | MODELO (simulación)
+Campos: identificador de tarea, estudiante, nombre, imagen, fecha, hora de inicio y fin.
+Estado: pendiente, en curso o finalizada.
+Solo se consideran tareas asignadas al estudiante seleccionado.
+Filtro diario: fecha seleccionada. Filtro semanal: lunes a domingo de la semana seleccionada.
+Orden: fecha, hora de inicio e identificador como desempate.
+Ejemplo ficticio: T01, E01, Regar plantas, lunes, 10:00-10:15.

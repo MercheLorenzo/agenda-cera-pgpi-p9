@@ -1,0 +1,7 @@
+AGENDA | VISTA (simulación)
+El perfil determina si se presenta la agenda diaria o semanal.
+Cada tarea muestra nombre, imagen asociada y horario de inicio y fin.
+Si no hay tareas, se presenta un mensaje comprensible.
+Se respetan las preferencias de tamaño de letra, colores y posición de controles.
+Los controles tienen etiquetas comprensibles y áreas de interacción amplias.
+Ejemplo ficticio: vista diaria con Regar plantas, 10:00-10:15.

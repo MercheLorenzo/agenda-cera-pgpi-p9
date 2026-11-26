@@ -1,2 +1,4 @@
 AGENDA | MODELO (simulación)
-Estado inicial: pendiente de definir los campos y los filtros.
+Campos: identificador de tarea, estudiante, nombre, imagen, fecha, hora de inicio y fin.
+Estado: pendiente, en curso o finalizada.
+Solo se consideran tareas asignadas al estudiante seleccionado.

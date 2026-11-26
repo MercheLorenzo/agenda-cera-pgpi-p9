@@ -1,2 +1,4 @@
 AGENDA | VISTA (simulación)
-Estado inicial: pendiente de definir la presentación y los apoyos.
+El perfil determina si se presenta la agenda diaria o semanal.
+Cada tarea muestra nombre, imagen asociada y horario de inicio y fin.
+Si no hay tareas, se presenta un mensaje comprensible.

@@ -1,2 +1,4 @@
 COMEDOR | LISTADO (simulación)
-Estado inicial: pendiente de definir la selección y el formato del informe.
+Seleccionar registros de la fecha solicitada.
+Mostrar aula, identificador ficticio y dieta.
+Agrupar los resultados por aula y dieta.

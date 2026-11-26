@@ -1,0 +1,2 @@
+AGENDA | MODELO (simulación)
+Estado inicial: pendiente de definir los campos y los filtros.

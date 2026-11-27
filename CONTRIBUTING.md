@@ -4,6 +4,8 @@ Agenda CeRa, proyecto académico de la asignatura Planificación y Gestión de P
 
 Esta guía establece las normas de trabajo colaborativo, control de versiones e integración de cambios para la práctica 9. Los archivos `.txt` simulan código: el repositorio no contiene una aplicación ejecutable. El alcance y las responsabilidades generales se describen en el [README](README.md).
 
+La práctica ya está completada. Esta guía conserva las normas del proceso seguido y sirve como referencia: los comandos de creación de ramas y etiquetas son ejemplos históricos, no pasos pendientes que deban repetirse. Consulta el [CHANGELOG](CHANGELOG.md) para conocer las versiones publicadas.
+
 ## 1. Equipo y reparto de tareas
 
 | Tarea | Responsable | Colaboradores | Rama de integración |
@@ -38,16 +40,17 @@ Utiliza tu correo verificado o la dirección `noreply` facilitada por GitHub. Si
 | `feature/comedor` | `main` | Integración de la tarea de comedor. |
 | `feature/comedor-manuel` | `feature/comedor` | Registro de comensales, dietas y validación. |
 | `feature/comedor-mercedes` | `feature/comedor` | Generación del listado diario. |
-| `fix/CLAVE-NUMERO-listado-comedor` | `main` | Corrección asociada a una incidencia real de Jira. |
+| `fix/CERA-1-listado-comedor` | `main` | Corrección definitiva asociada a CERA-1 e integrada en `main`. |
+| `fix/CERAP-1-listado-comedor` | `main` | Rama histórica del espacio Jira empresarial; no integrar. |
 
-Las dos ramas de tarea deben partir de la misma línea base de `main`, antes de integrar cualquiera de las dos tareas. Cada responsable crea al menos dos archivos iniciales. Las ramas personales deben partir de la tarea ya inicializada, no directamente de `main`.
+Las dos ramas de tarea deben partir de `main` antes de integrar cualquiera de las dos tareas. Pueden existir cambios intermedios de documentación que no alteren el contenido funcional de partida. Cada responsable crea al menos dos archivos iniciales. Las ramas personales deben partir de la tarea ya inicializada, no directamente de `main`.
 
 ## 4. Flujo de contribución
 
 1. Los responsables crean y publican las ramas `feature/agenda` y `feature/comedor` con sus archivos iniciales.
 2. Cada participante crea su rama personal a partir de la rama de tarea correspondiente.
 3. Cada participante realiza al menos dos commits con modificaciones reales en sus archivos de simulación y publica su rama.
-4. Una vez publicadas las cuatro ramas personales, cada miembro integra su aportación en la rama de tarea. Se coordina el orden de los merges para evitar cambios simultáneos sobre la misma rama.
+4. Una vez terminados sus commits personales, cada miembro integra su aportación en la rama de tarea, de forma coordinada con el resto del equipo. Se coordina el orden de los merges para evitar cambios simultáneos sobre la misma rama.
 5. Juan Carlos y Manuel revisan las dos aportaciones de sus respectivas tareas. Juan Carlos integra agenda en `main` y, después, Manuel integra comedor en `main`.
 6. Mercedes publica `v1.0.0`, registra y corrige la incidencia de Jira y publica `v1.0.1` tras verificar la corrección.
 
@@ -127,28 +130,30 @@ Guardar los archivos de texto en UTF-8. Mantener los nombres y la estructura del
 
 Tras publicar `v1.0.0`, se registra la incidencia simulada de comedor en Jira, con descripción, responsable y criterios de aceptación. La incidencia se vincula a GitHub usando su clave real tanto en la rama como en el commit.
 
-Ejemplo (sustituir `CERAP-1` por la clave asignada por Jira):
+Ejemplo histórico de la corrección definitiva (para futuras incidencias, sustituir `CERA-1` por la clave real asignada por Jira):
 
 ```bash
 git switch main
 git pull --ff-only origin main
-git switch -c fix/CERAP-1-listado-comedor
+git switch -c fix/CERA-1-listado-comedor
 # Modificar y revisar comedor/listado.txt.
 git add comedor/listado.txt
-git commit -m "CERAP-1 fix: excluir registros sin asistencia del listado"
-git push -u origin fix/CERAP-1-listado-comedor
+git commit -m "CERA-1 fix: excluir registros sin asistencia del listado"
+git push -u origin fix/CERA-1-listado-comedor
 ```
 
 Comprobar que Jira muestra la rama y el commit asociados. La responsable integra la corrección en `main` mediante un merge sin squash. La incidencia se cierra tras comprobar documentalmente el cambio y publicar la versión corregida. No registrar como ejecutadas pruebas que no se han realizado.
+
+En la práctica, la incidencia inicial `CERAP-1` se trasladó desde un espacio empresarial a un espacio de desarrollo de software de Jira. La clave definitiva es [CERA-1](https://pgpi-practicas.atlassian.net/browse/CERA-1). La rama `fix/CERAP-1-listado-comedor` queda como histórico sin integrar; la rama `fix/CERA-1-listado-comedor` contiene la corrección definitiva. Se conserva la trazabilidad sin reescribir commits ni desplazar etiquetas.
 
 ## 9. Versionado y publicación
 
 Se utilizan etiquetas anotadas de Git con el formato `vMAJOR.MINOR.PATCH`:
 
-| Versión | Contenido previsto |
+| Versión publicada | Contenido |
 | --- | --- |
 | `v1.0.0` | Agenda y comedor integrados en `main`. |
-| `v1.0.1` | Corrección de la incidencia de Jira integrada en `main`. |
+| `v1.0.1` | Corrección de CERA-1 integrada en `main`. |
 
 Una vez comprobadas ambas tareas, la coordinadora crea la primera etiqueta:
 
@@ -168,7 +173,7 @@ git tag -a v1.0.1 -m "Hito P9: correccion de listado del comedor"
 git push origin v1.0.1
 ```
 
-Las etiquetas deben apuntar a commits distintos. Si una versión ya existe, comprobarla y no recrearla ni desplazarla. Las Releases de GitHub son opcionales.
+Las etiquetas publicadas apuntan a `034f40d` (v1.0.0) y `69b73ba` (v1.0.1). No recrearlas ni desplazarlas. Los cambios posteriores exclusivamente documentales pueden incorporarse a `main` sin modificar las etiquetas. Las Releases de GitHub son opcionales.
 
 ## 10. Verificación y entrega
 
@@ -183,7 +188,7 @@ git status
 
 Comprobar que se conservan las contribuciones de los tres integrantes, las ramas de tarea y personales, las dos etiquetas y la asociación de la incidencia en Jira. La comparación de versiones es una verificación documental de los archivos de simulación, no una prueba de una aplicación en ejecución.
 
-La entrega incluye el enlace al repositorio, los enlaces a las dos versiones y el enlace al proyecto de Jira. Garantizar el acceso del profesorado a los recursos según el enunciado. Se recomienda adjuntar el enlace directo a la incidencia como evidencia adicional.
+La entrega incluye el enlace al repositorio, los enlaces a las dos versiones y el enlace al proyecto de Jira. Garantizar el acceso del profesorado a los recursos según el enunciado. Se recomienda adjuntar el enlace directo a la incidencia como evidencia adicional. Los enlaces definitivos están recopilados en el [README](README.md), incluido el [espacio Jira](https://pgpi-practicas.atlassian.net/jira/software/projects/CERA/boards/34).
 
 ## 11. Comunicación y buenas prácticas
 

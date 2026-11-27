@@ -2,7 +2,7 @@ COMEDOR | LISTADO (simulación)
 Seleccionar registros de la fecha solicitada.
 Mostrar aula, identificador ficticio y dieta.
 Agrupar los resultados por aula y dieta.
-Regla v1.0.0: incluir todos los registros de la fecha, incluso asistencia=no.
-Ejemplo para 2026-11-25: E01, E02, E03. Total: 3.
+Regla corregida v1.0.1: incluir solo registros de la fecha con asistencia=si.
+Ejemplo para 2026-11-25: E01, E03. Total: 2.
 El informe solo debe estar disponible para perfiles autorizados.
-Nota: la regla de inclusión representa un defecto simulado que se corregirá después del primer hito.
+Comprobación documental: E02 queda excluido por asistencia=no; E04 queda excluido por fecha distinta.
